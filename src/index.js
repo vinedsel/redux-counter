@@ -12,11 +12,11 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case 'Increment':
       return {
         count: state.count + 1
       };
-    case 'DECREMENT':
+    case 'Decrement':
       return {
         count: state.count - 1
       };
@@ -29,9 +29,9 @@ function reducer(state = initialState, action) {
 
 
 const App = () => (
-  <div>
-    <Counter />
-  </div>
+ <Provider store={store}>
+   <Counter />
+ </Provider>
 );
 
 render(<App />, document.getElementById('root'));
